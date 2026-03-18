@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  color: #131313;
+  line-height: 1.5;
+  font-family: 'Roboto Mono', monospace;
+  a {
+        text-decoration: none;
+        color: #131313;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+  .page_header{
+    display: block;
+    flex-direction: column !important; /*stack vertically*/
+    padding-top: 0px !important;
+  }
+  .page_name{
+    text-align: center !important;
+    padding-top: 10px !important;
+    padding-right: 0;
+  }
+  .page_header img{
+    width: 100% !important;
+  }
+  .content .content_symbol img{
+    width: 65vw !important;
+    padding: 20px 70px !important;
+    float: none !important;
+    justify-content: center !important;
+  }
+} /*^ for smaller screen*/
+
+.page_header img{
+  float: left;
+  height: 200px;
+  width: 65vw;
+  background-color: #e96a64ff;
+}
+
+.page_header {
+  display: flex;
+  flex-direction: row; /*default: image and page name + subtile side by side*/
+  gap: 0;
+  margin: 0;
+}
+
+.page_name {
+  align-items: right;
+  text-align: right;
+  color: #131313;
+  padding-right: 2rem;
+  padding-top: 10vw;
+  font-family: 'lobster', cursive;
+  flex: 1; /*allow content to grow and take available space*/
+  h1 {
+    font-size: 35px; 
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.content{
+  margin: 0 2rem;
+  .content1 h2{
+    margin-top: 20px;
+  }
+}
+
+.content .content_symbol img{
+  width: 20vw;
+  height: auto;
+  float: left;
+  padding: 20px 10px;
+  padding-left: 0;
+  margin: 15px 2rem;
+}
+
+.content h2{
+  font-size: 18px;
+  margin-top: 2rem;
+  font-family: 'lobster', cursive;
+}
+/*^ setting for the content*/
+
+.content p {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 1px solid #131313;
+  margin: 0;
+}
+
+td {
+  border: 1px solid #131313;
+  padding: 10px;
+  text-align: left;
+}
+
+td:nth-child(odd) {font-weight: bolder;}
+tr:nth-child(even) {background-color: #dddddd;}
+
+footer {
+  position: absolute;
+  display: table;
+  width: 100%;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+  background-size: cover;
+  .footer-container{
+        width: 100%;
+        background: #e9e4dbff;
+        margin-top: 20px;
+        padding: 15px 1.5rem;
+        overflow: hidden;
+        .previous {
+            float: left;
+            padding: 10px;
+        }
+        .next {
+            float: right;
+            padding: 10px;
+        }
+    }
+} /*footer style*/
+
+
+

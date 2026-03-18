@@ -1,0 +1,116 @@
+header {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 8vh;
+  background-size: cover;
+  .header-container{
+    position:fixed;
+    z-index: 100; /*keep header on top of other elements*/
+    width: 100%;
+    background: #e9e4dbff;
+  }
+  a {
+    text-decoration: none;
+    color: #131313;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  header{
+    margin-bottom: 4.5vh;
+  }
+  .about_as, .about_cz {
+    display: none !important;
+  }
+  .logo {
+    display: none !important;
+  }  
+  button {
+    display: block !important;
+    float: left;
+    position: absolute;
+  }
+  .site-title {
+    display: inline-block;
+    margin: 0 1.5%;
+    width: 30%;
+  }
+} /*^ header for smaller screen*/
+
+.dropbtn {
+  display: none;
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer; /* click on the button to see dropdown */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 2.9rem;
+    font-family: 'lobster', cursive;
+  }
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 12px 10px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover, .dropbtn:focus, .dropdown:hover .dropbtn  {
+  background-color: #ddd;
+  color: #e96a64ff;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+header ul{
+  display: block;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  list-style-type: none; 
+} /*header ul list, to make the list horizontal and remove default padding and margin*/
+
+.logo {float: left;} /*make the logo float to the left and set size*/
+
+.homepage{
+  font-size: 1.5rem;
+  color: #131313;
+  text-transform: uppercase;
+  font-family: 'pacifico', cursive;
+} /*^ setting for site title*/
+
+.about-page{
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-family: 'lobster', cursive;
+  width: 100%;
+  .about_cz, .about_as {
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #131313;
+    font-size: 1rem;
+    padding: 0 10vw;
+  } /*setting for the links and type setting for the Navigation menu*/
+} /* overall setting for the two about pages*/
+
+a:webkit-any-link {cursor: pointer;}/*make the cursor a pointer when hovering over links*/
+
+li a:hover{
+  background-color: transparent;
+  color: #e96a64ff;
+} /*hover effect for the links in the navigation menu*/
