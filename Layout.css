@@ -20,7 +20,6 @@ a:hover {color: #e96a64ff;} /*color when hovering link text*/
 
 @media screen and (max-width: 670px) {
   img {
-    width: 100% !important;
     margin: 15px 0 !important;
   }
   .content_w, .content_e {
@@ -46,13 +45,13 @@ a:hover {color: #e96a64ff;} /*color when hovering link text*/
   text-align: center;
   font-size: 18px;
   color: #131313;
-  padding: 2vw;
+  padding: 2vw 0;
   margin-bottom: 2vw;
   font-family: 'lobster', cursive;
   img{
     float: left;
     margin: 0;
-    width: 100vw;
+    width: 100%;
   }
 }
 
