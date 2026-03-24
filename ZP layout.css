@@ -12,6 +12,7 @@ body {
   color: #131313;
   line-height: 1.5;
   font-family: 'Roboto Mono', monospace;
+  font-size: 2.5vh;
   a {
         text-decoration: none;
         color: #131313;
@@ -19,7 +20,7 @@ body {
 }
 
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 1200px) {
   .page_header{
     display: block;
     flex-direction: column !important; /*stack vertically*/
@@ -61,13 +62,13 @@ body {
   color: #131313;
   padding-right: 2rem;
   padding-top: 10vw;
-  font-family: 'lobster', cursive;
+  font-family: 'Georgia', serif;
   flex: 1; /*allow content to grow and take available space*/
   h1 {
-    font-size: 35px; 
+    font-size: 6vh; 
   }
   h2 {
-    font-size: 18px;
+    font-size: 2.5vh;
   }
 }
 
@@ -88,16 +89,13 @@ body {
 }
 
 .content h2{
-  font-size: 18px;
+  font-size: 3vh;
   margin-top: 2rem;
-  font-family: 'lobster', cursive;
+  font-family: 'Georgia', serif;
 }
 /*^ setting for the content*/
 
-.content p {
-  padding-top: 5px;
-  font-size: 16px;
-}
+.content p {padding-top: 5px;}
 
 table{
   width: 100%;
@@ -113,7 +111,7 @@ td {
   text-align: left;
 }
 
-td:nth-child(odd) {font-weight: bolder;}
+td:nth-child(odd) {font-weight: bolder; text-align: center;}
 tr:nth-child(even) {background-color: #dddddd;}
 
 footer {
