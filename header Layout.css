@@ -2,7 +2,7 @@ header {
   position: relative;
   display: table;
   width: 100%;
-  margin-bottom: 8vh;
+  margin-bottom: 6vh;
   background-size: cover;
   font-family: 'Georgia', serif;
   .header-container{
@@ -17,9 +17,9 @@ header {
   }
 }
 
-@media screen and (max-width: 670px) {
+@media (max-width: 670px) {
   header{
-    margin-bottom: 4.5vh;
+    margin-bottom: 4vh;
   }
   .about_as, .about_cz {
     display: none !important;
@@ -33,9 +33,8 @@ header {
     position: absolute;
   }
   .site-title {
-    display: inline-block;
-    margin: 0 1.5%;
-    width: 30%;
+    display: inline-block !important;
+    width: 50%;
   }
 } /*^ header for smaller screen*/
 
@@ -56,10 +55,11 @@ header {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     top: 2.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -70,7 +70,11 @@ header {
   text-align: left;
 }
 
-.dropdown-content a:hover, .dropbtn:focus, .dropdown:hover .dropbtn  {
+ .dropdown:hover .dropbtn  {
+  color: #e96a64ff;
+}
+
+.dropdown-content a:hover, .dropbtn:focus {
   background-color: #ddd;
   color: #e96a64ff;
 }
@@ -88,23 +92,27 @@ header ul{
 .logo {float: left;} /*make the logo float to the left and set size*/
 
 .homepage{
-  font-size: 1.5rem;
+  font-size: 180%;
   color: #131313;
   text-transform: uppercase;
   font-family: 'pacifico', cursive;
 } /*^ setting for site title*/
 
 .about-page{
-  margin-top: 5px;
+  margin-top: 10px;
   letter-spacing: 1px;
   width: 100%;
   .about_cz, .about_as {
     display: inline-block;
     padding-bottom: 10px;
     color: #131313;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0 10vw;
   } /*setting for the links and type setting for the Navigation menu*/
+  a:hover{
+    background-color: transparent;
+    color: #e96a64ff;
+  }
 } /* overall setting for the two about pages*/
 
 a:webkit-any-link {cursor: pointer;}/*make the cursor a pointer when hovering over links*/

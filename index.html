@@ -17,31 +17,48 @@
         <header></header>
         <section>
             <div class="page_name">
+                <br>
                 <h1>The Zodiac</h1>
             </div>
         </section>
-        <section class="content">
-                <div class="content1">
+        <div class="content">
+            <section class="content1">
+                <div class="intro_H">
                     <h2>What is the Zodiac?</h2>
                     <p>The zodiacs are divided into 12 equal parts, called “signs” that 
                         form a duration. There are two different set of signs that are 
-                        called the zodiac; the Western astrology and the Eastern zodiac. </p>
-                    <p>The Eastern (Chinese) and Western zodiac systems differ 
-                        significantly in structure and focus—using years vs. months, 
-                        and animals vs. constellations—but share deep similarities in 
-                        their goal of interpreting personality, predicting future 
-                        trends, and offering a, framework for understanding self and 
-                        others. Both systems use a 12-part cycle to categorize human 
-                        behavior.</p>
+                        called the zodiac; the Western astrology and the Eastern zodiac.</p>
+                        <br>
+                    <p>The Eastern (Chinese) and Western zodiac systems differ significantly in structure and focus—using years vs. months, 
+                        and animals vs. constellations—but share deep similarities in their goal of interpreting personality, predicting future 
+                        trends, and offering a, framework for understanding self and others. Both systems use a 12-part cycle to categorize human behavior.</p>
+                </div>
+                <div class="Calculator">
+                    <div class="container">
+                        <h1>Zodiac Sign Calculator</h1>
+                        <div>
+                           <label for="dob">Date of Birth:</label>
+                            <!-- Input type date for easy user input -->
+                            <input type="date" id="dob" name="dob"> 
+                        </div>
+                        <button onclick="calculateZodiac()">Calculate</button>
+                        <div id="result"></div>
+                    </div>
+                <script src="sign search.js"></script>
+                </div>
+            </section>
+            <br>
+            <div class="content2">
+                <div class="table1">
                     <h2>Similarities</h2>
                     <table>
                         <tr>
-                            <th>12-Fold Structure</th>
-                            <td>Both systems utilize 12 distinct signs to categorize personality and behavioral traits</td>
+                            <th style="width: 20%">12-Fold Structure</th>
+                            <td style="width: 80%">Both systems utilize 12 distinct signs to categorize personality and behavioral traits</td>
                         </tr>
                         <tr>
                             <th>Symbolic Archetypes</th>
-                            <td>Both use animals or specific, mythical, and elemental figures to represent human characteristics (e.g., the courage of a Leo vs. the diligence of an Ox)</td>
+                            <td>Both use animals or specific, mythical, and elemental figures to represent human characteristics (e.g. the courage of a Leo vs. the diligence of an Ox)</td>
                         </tr>
                         <tr>
                             <th>Belief Systems</th>
@@ -52,51 +69,29 @@
                             <td>Both systems are rooted in observing the heavens to find meaning, using the movement of stars, planets, or, in the case of China, Jupiter's 12-year orbit</td>
                         </tr>
                     </table>
-                    <br>
-                    <h2>Difference: Eastern (Chinese) vs. Western</h2>
+                </div>
+                <div class="table2">
+                    <h2>Comparison Table</h2>
                     <table>
-                        <tr>
-                            <th>Time Calculation</th>
-                            <td>Western signs are based on the month of birth (position of the sun), while Chinese signs are based on the year of birth (lunar calendar)</td>
-                        </tr>
-                        <tr>
-                            <th>Focus</th>
-                            <td>Western astrology focuses more on psychology, individuality, and personal development
-                                <br>
-                                <br>
-                                Chinese astrology focuses more on destiny, social roles, and harmony</td>
-                        </tr>
-                        <tr>
-                            <th>Elements</th>
-                            <td>Western astrology uses four elements (Fire, Earth, Air, Water)
-                                <br>
-                                <br>
-                                Chinese astrology uses five elements (Wood, Fire, Earth, Metal, Water)</td>
-                        </tr>
-                        <tr>
-                            <th>Cycle</th>
-                            <td>The Chinese system operates on a 60-year cycle (combining 12 animals with 5 elements)</td>
+                        <tr class="label">
+                            <th >Feature</th>
+                            <th style="width:45%">Western Zodiac</th>
+                            <th style="width:45%">Eastern Zodiac</th>
                         </tr>
                         <tr>
                             <th>Origin</th>
-                            <td> Western astrology originates from Babylonian/Hellenistic traditions
-                                <br>
-                                <br>
-                                Chinese astrology is rooted in Taoist philosophy and folklore</td>
-                        </tr>
-                    </table>
-                    <br>
-                    <h2>Comparison Table</h2>
-                    <table>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Western Zodiac</th>
-                            <th>Eastern Zodiac</th>
+                            <td>Originates from Babylonian/ Hellenistic traditions</td>
+                            <td>Rooted in Taoist philosophy and folklore</td>
                         </tr>
                         <tr>
                             <th>Duration</th>
                             <td>Monthly</td>
                             <td>Yearly</td>
+                        </tr>
+                        <tr>
+                            <th>Cycle</th>
+                            <td>12 signs</td>
+                            <td>60-year cycle (combining 12 animals with 5 elements)</td>
                         </tr>
                         <tr>
                             <th>Basis</th>
@@ -120,33 +115,37 @@
                         </tr>
                     </table>
                 </div>
-                <div class="content_w">
-                    <img src="Images\Stars of AS.jpg" alt="as">
+            </div>
+            <div class="content_w">
+                <img src="Images\Stars of AS.jpg" alt="as">
+                <div class="text">
                     <h2>Western Zodiac</h2>
                     <p>Western astrology is based on the position of the sun, moon and 
                         planets at the time of a person's birth. It is divided into 12 
                         signs, each representing a different personality trait and set 
-                        of characteristics.</p>
+                        of characteristics. The 12 constellation signs are Aries, Taurus, 
+                        Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius
+                        and Pisces.</p>  
                 </div>
-                <div class="content_e">
-                    <img src="Images\cz red cutout.jpeg" alt="cz">
-                    <h2>Eastern Zodiac</h2>
-                    <p>Eastern zodiac, also known as Chinese zodiac, is based on a 
-                        12-year cycle, with each year associated with a specific 
-                        animal sign. The 12 animal signs are Rat, Ox, Tiger, Rabbit, 
-                        Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog and Pig.</p>
-                </div>
-                <br>
-        </section>
-        <section class="footer">
-            <div class="container">
-                <h1>Zodiac Sign Calculator</h1>
-                <label for="dob">Date of Birth:</label>
-                <!-- Input type date for easy user input -->
-                <input type="date" id="dob" name="dob">
-                <button onclick="calculateZodiac()">Calculate</button>
-                <div id="result"></div>
             </div>
-           <script src="sign search.js"></script>
+            <div class="content_e">
+                <img src="Images\cz red cutout.jpeg" alt="cz">
+                <div class="text">
+                    <h2>Eastern Zodiac</h2>
+                    <p>Eastern zodiac, also known as Chinese zodiac or Sheng Xiao (生肖), 
+                        is a repeating 12-year cycle of animal signs nd their ascribed 
+                        attributes, based on the lunar calendar. The Lunar New Year or Spring
+                        Festival marks the transition from one animal to the next. It may be 
+                        tricky to determine your Chinese zodiac sign if you are born in 
+                        January or February, since Chinese New Year changes every year. The 12 
+                        animal signs are Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, 
+                        Monkey, Rooster, Dog and Pig.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="left">©2026 YUE 12</p>
+            <p class="right">Website designed by Jessica Chen</p>
+        </footer>
     </body>
 </html>
