@@ -31,7 +31,10 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .content {margin: 0 1rem !important;}
+  .content {
+    margin: 0 1rem !important;
+    width: calc(100%- 2rem) !important;
+  }
   .page_header{
     display: block;
     flex-direction: column !important; /*stack vertically*/
