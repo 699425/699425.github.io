@@ -24,7 +24,7 @@ a:hover {color: #e96a64ff;} /*color when hovering link text*/
     padding: 0.5rem !important;
     .left{float:none !important;}
     .right{float:none !important;}
-    }
+  }
   h2, h3, p, table, li{margin: 0 0.5rem !important;}
   .page_name_img{
     grid:none !important;

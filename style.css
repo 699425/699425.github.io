@@ -21,8 +21,17 @@ body {
     }
 }
 
+@media (max-width: 650px) {
+  footer{
+    text-align: center;
+    font-weight: bold;
+    .previous, .next{float:none !important; padding: 20px 20% !important;}
+    }
+  .content {margin: 0 0.75rem !important;}
+}
 
 @media (max-width: 1000px) {
+  .content {margin: 0 1rem !important;}
   .page_header{
     display: block;
     flex-direction: column !important; /*stack vertically*/
@@ -33,12 +42,14 @@ body {
     padding-top: 10px !important;
     padding-right: 0;
     h1{margin-top: 10px !important; font-size: 36px;}
+    h2{font-size: 14px !important; margin-bottom: 10px !important;}
   }
   .page_header img{
     width: 100% !important;
     height: auto !important;
     margin:0 !important;
   }
+  table{width: 100% !important;}
   .content_symbol p{margin:0 !important;}
   .content .content_symbol img{
     width: 50% !important;
@@ -46,7 +57,6 @@ body {
     padding: 20px 0 !important;
     justify-items: center !important;
   }
-  .content{margin: 0 0.5rem !important;}
 } /*^ for smaller screen*/
 
 .page_header {
@@ -108,7 +118,7 @@ body {
 .content p {padding-top: 5px; font-size: 16px;}
 
 table{
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin-top: 15px;
   border: 1px solid #131313;
