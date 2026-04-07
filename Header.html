@@ -9,29 +9,140 @@
     <body>
        <header>
             <nav class="header-container">
-                <div class="dropdown">
-                    <button class="dropbtn">&#9776</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="Chinese Zodiac.html">Chinese Zodiac</a>
-                        <a href="Astrological Sign.html">Astrological Signs</a>
+                <!-- Toggle button -->
+                <button id="navToggle" class="nav-btn">☰</button>
+
+                <!-- Side Navigation -->
+                <div id="sideNav" class="sidenav">
+                    <a href="index.html" class="side-item sideNav-link">Home</a>
+                    <div class="side-item">
+                        <div class="sideNav-link toggle" style="letter-spacing: 1.2px;">Chinese Zodiac ▸</div>
+                        <div class="sideNav-submenu">
+                            <a href="Chinese Zodiac.html">About</a>
+                            <a href="CZ 1 Rat.html">Rat</a>
+                            <a href="CZ 2 Ox.html">Ox</a>
+                            <a href="CZ 3 Tiger.html">Tiger</a>
+                            <a href="CZ 4 Rabbit.html">Rabbit</a>
+                            <a href="CZ 5 Dragon.html">Dragon</a>
+                            <a href="CZ 6 Snake.html">Snake</a>
+                            <a href="CZ 7 Horse.html">Horse</a>
+                            <a href="CZ 8 Goat.html">Goat</a>
+                            <a href="CZ 9 Monkey.html">Monkey</a>
+                            <a href="CZ 10 Rooster.html">Rooster</a>
+                            <a href="CZ 11 Dog.html">Dog</a>
+                            <a href="CZ 12 Pig.html">Pig</a>
+                        </div>
+                    </div>
+                    <div class="side-item">
+                        <div class="sideNav-link toggle">Astrological Signs▸</div>
+                        <div class="sideNav-submenu">
+                            <a href="Astrological Sign.html">About</a>
+                            <a href="AS 1 Aries.html">Aries</a>
+                            <a href="AS 2 Taurus.html">Taurus</a>
+                            <a href="AS 3 Gemini.html">Gemini</a>
+                            <a href="AS 4 Cancer.html">Cancer</a>
+                            <a href="AS 5 Leo.html">Leo</a>
+                            <a href="AS 6 Virgo.html">Virgo</a>
+                            <a href="AS 7 Libra.html">Libra</a>
+                            <a href="AS 8 Scorpio.html">Scorpio</a>
+                            <a href="AS 9 Sagittarius.html">Sagittarius</a>
+                            <a href="AS 10 Capricorn.html">Capricorn</a>
+                            <a href="AS 11 Aquarius.html">Aquarius</a>
+                            <a href="AS 12 Pisces.html">Pisces</a>
+                        </div>
+                    </div>
+                    <span class="closeBtn" id="closeNav">&times;</span>
+                </div>
+                <div class="site-title">
+                    <div class="logo">
+                            <img src="Site Logo.svg" alt="Logo" width="80" height="40">
+                    </div> 
+                    <a href="index.html" class="homepage">yue 12 <span class="fireworks"></span></a>
+                </div>
+                <div class="nav-bar">    
+                    <div class="nav-links">
+                        <ul class="about-page">
+                            <li class="dropdown">
+                                <a href="Chinese Zodiac.html" class="about-link cz">Chinese Zodiac ▾</a> 
+                                <ul class="dropdown-submenu">
+                                    <li><a href="CZ 1 Rat.html">Rat</a></li>
+                                    <li><a href="CZ 2 Ox.html">Ox</a></li>
+                                    <li><a href="CZ 3 Tiger.html">Tiger</a></li>
+                                    <li><a href="CZ 4 Rabbit.html">Rabbit</a></li>
+                                    <li><a href="CZ 5 Dragon.html">Dragon</a></li>
+                                    <li><a href="CZ 6 Snake.html">Snake</a></li>
+                                    <li><a href="CZ 7 Horse.html">Horse</a></li>
+                                    <li><a href="CZ 8 Goat.html">Goat</a></li>
+                                    <li><a href="CZ 9 Monkey.html">Monkey</a></li>
+                                    <li><a href="CZ 10 Rooster.html">Rooster</a></li>
+                                    <li><a href="CZ 11 Dog.html">Dog</a></li>
+                                    <li><a href="CZ 12 Pig.html">Pig</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="Astrological Sign.html" class="about-link as">Astrological Signs ▾</a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="AS 1 Aries.html">Aries</a></li>
+                                    <li><a href="AS 2 Taurus.html">Taurus</a></li>
+                                    <li><a href="AS 3 Gemini.html">Gemini</a></li>
+                                    <li><a href="AS 4 Cancer.html">Cancer</a></li>
+                                    <li><a href="AS 5 Leo.html">Leo</a></li>
+                                    <li><a href="AS 6 Virgo.html">Virgo</a></li>
+                                    <li><a href="AS 7 Libra.html">Libra</a></li>
+                                    <li><a href="AS 8 Scorpio.html">Scorpio</a></li>
+                                    <li><a href="AS 9 Sagittarius.html">Sagittarius</a></li>
+                                    <li><a href="AS 10 Capricorn.html">Capricorn</a></li>
+                                    <li><a href="AS 11 Aquarius.html">Aquarius</a></li>
+                                    <li><a href="AS 12 Pisces.html">Pisces</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <ul>
-                    <li class="logo">
-                        <img src="Site Logo.svg" alt="Logo" width="80" height="40">
-                    </li>
-                    <li>
-                        <span class="site-title">
-                            <a href="index.html" class="homepage">yue 12</a>
-                        </span>
-                        <br>
-                        <span class="about-page">
-                            <a href="Chinese Zodiac.html" class="about_cz">Chinese Zodiac</a>
-                            <a href="Astrological Sign.html" class="about_as">Astrological Signs</a>
-                        </span>
-                    </li>
-                </ul>
             </nav>
         </header>
+        <script>
+        const sideNav = document.getElementById('sideNav');
+        const navBtn = document.getElementById('navToggle');
+        const closeBtn = document.getElementById('closeNav');
+
+        function closeAllSubmenus() {
+        document
+            .querySelectorAll('.side-item')
+            .forEach(el => el.classList.remove('active'));
+        }
+
+        function closeNav() {
+        sideNav.classList.remove('open');
+        closeAllSubmenus();
+        }
+
+        navBtn.onclick = () => sideNav.classList.add('open');
+        closeBtn.onclick = closeNav;
+
+        // toggle submenu on click
+        document.querySelectorAll('.toggle').forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.stopPropagation(); // prevent outside click from firing
+
+            document.querySelectorAll('.side-item').forEach(el => {
+            if (el !== this.parentElement) el.classList.remove('active');
+            });
+
+            this.parentElement.classList.toggle('active');
+        });
+        });
+
+
+        // 🔥 CLICK OUTSIDE TO CLOSE
+        document.addEventListener('click', function (e) {
+        const clickedInsideNav = sideNav.contains(e.target);
+        const clickedButton = navBtn.contains(e.target);
+
+        if (!clickedInsideNav && !clickedButton && sideNav.classList.contains('open')) {
+            closeNav();
+        }
+        });
+        </script>
     </body>
 </html>

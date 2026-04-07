@@ -1,22 +1,60 @@
+const asPages = {
+    "Aries": "AS 1 Aries",
+    "Taurus": "AS 2 Taurus",
+    "Gemini": "AS 3 Gemini",
+    "Cancer": "AS 4 Cancer",
+    "Leo": "AS 5 Leo",
+    "Virgo": "AS 6 Virgo",
+    "Libra": "AS 7 Libra",
+    "Scorpio": "AS 8 Scorpio",
+    "Sagittarius": "AS 9 Sagittarius",
+    "Capricorn": "AS 10 Capricorn",
+    "Aquarius": "AS 11 Aquarius",
+    "Pisces": "AS 12 Pisces",
+};
+const czPages = {
+    "Rat": "CZ 1 Rat",
+    "Ox": "CZ 2 Ox",
+    "Tiger": "CZ 3 Tiger",
+    "Rabbit": "CZ 4 Rabbit",
+    "Dragon": "CZ 5 Dragon",
+    "Snake": "CZ 6 Snake",
+    "Horse": "CZ 7 Horse",
+    "Goat": "CZ 8 Goat",
+    "Monkey": "CZ 9 Monkey",
+    "Rooster": "CZ 10 Rooster",
+    "Dog": "CZ 11 Dog",
+    "Pig": "CZ 12 Pig"
+};
+const animalMap = {
+    "鼠": "Rat",
+    "牛": "Ox",
+    "虎": "Tiger",
+    "兔": "Rabbit",
+    "龙": "Dragon",
+    "蛇": "Snake",
+    "马": "Horse",
+    "羊": "Goat",
+    "猴": "Monkey",
+    "鸡": "Rooster",
+    "狗": "Dog",
+    "猪": "Pig"
+};
 function calculateZodiac() {
     const dobInput = document.getElementById('dob');
     const resultDiv = document.getElementById('result');
-    const dobValue = dobInput.value;
 
-    if (!dobValue) {
-        resultDiv.textContent = "Please enter your date of birth.";
+    if (!dobInput.value) {
+        resultDiv.textContent = "Pick a date first";
         return;
     }
 
-    const birthDate = new Date(dobValue);
-    const year = birthDate.getYear();
+    const birthDate = new Date(dobInput.value);
+    const year = birthDate.getFullYear();
     const month = birthDate.getMonth() + 1;
     const day = birthDate.getDate();
 
     let az = "";
-
-    const czSigns = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", 
-                    "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
 
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
         az = "Aquarius";
@@ -51,16 +89,12 @@ function calculateZodiac() {
 Please enter a valid year`;
         return;
     }
-    // Calculate the index in the array using the modulo operator
-    // The formula (year) % 12 works for years greater than 0 CE
-    let index = (year) % 12;
-    // Handle potential negative index if year < 4
-    if (index < 0) {
-        index += 12;
-    }
-    
-    const cz = czSigns[index];
 
-    resultDiv.textContent = `Your Astrological Sign is ${az} 
-Your Chinese Zodiac sign is ${cz}`;
+    const lunar = solarlunar.solar2lunar(year, month, day);
+    const cz = animalMap[lunar.animal];
+    
+    const czpage = czPages[cz];
+    const aspage = asPages[az];
+    resultDiv.innerHTML = `Your Astrological Sign is <a href="${aspage}.html">${az}</a>
+Your Chinese Zodiac sign is <a href="${czpage}.html">${cz}</a>`;
 }

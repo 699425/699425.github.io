@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   position: relative;
   display: table;
@@ -5,119 +11,257 @@ header {
   margin-bottom: 6vh;
   background-size: cover;
   font-family: 'Georgia', serif;
-  .header-container{
-    position:fixed;
-    z-index: 100; /*keep header on top of other elements*/
-    width: 100%;
-    background: #e9e4dbff;
-  }
   a {
     text-decoration: none;
     color: #131313;
   }
 }
 
+.header-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #e9e4dbff;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;   /* 🔥 THIS makes two rows */
+}
+
+
 @media (max-width: 670px) {
-  header{
-    margin-bottom: 4vh;
-  }
-  .about_as, .about_cz {
-    display: none !important;
-  }
-  .logo {
-    display: none !important;
-  }  
-  button {
+  .logo {display: none;}
+  .nav-bar{display: none !important;}
+  .nav-btn {
     display: block !important;
-    float: left;
-    position: absolute;
   }
-  .site-title {
-    display: inline-block !important;
-    width: 50%;
-  }
+  header{margin-bottom: 4vh !important;}
+  .site-title{padding: 10px 0 !important;}
 } /*^ header for smaller screen*/
 
-.dropbtn {
+/* Toggle button */
+.nav-btn {
   display: none;
-  background-color: transparent;
-  color: black;
-  padding: 10px;
   font-size: 20px;
+  background: transparent;
+  border-radius: 4px;
+  color: black;
   border: none;
-  cursor: pointer; /* click on the button to see dropdown */
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; /*above sidenav*/
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 
-.dropdown {
+.closeBtn{
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  padding: 10px;
+
+  width: 40px;              /* fixed box */
+  height: 40px;
+
+  display: flex;            /* center the × */
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+
+  transform-origin: center;
+  transition: transform 2s ease;
+}
+
+/* Side navigation hidden by default */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #222;
+  padding-top: 100px;
+  z-index: 11;
+  transform: translateX(-100%);   /* ✅ hidden off screen */
+  transition: transform 0.3s ease;
+}
+
+.sidenav.open {
+  transform: translateX(0);   /* slides into view */
+}
+
+.side-item {
+  position: relative;   /* anchor for submenu */
+  text-decoration: none; 
+  font-size: 18px; 
+  color: white; 
+  display: block; 
+  transition: 0.2s;
+  
+}
+
+.sideNav-link{
+  display: block;
+  text-align: justify;
+  padding: 14px 10px;
+  padding-right: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hidden by default submenu */
+.sideNav-submenu {
+  position: fixed;          /* 🔥 key change */
+  top: 0;
+  left: 100%;           /* same width as sideNav */
+  
+  width: 180px;
+  height: 100vh;           /* full screen height */
+  background: #333;
+  padding: 20px 0;      /* same as sideNav content start */
+  padding-top: 30px;
+  overflow-y: scroll;
+
+  /* 🔥 animation setup */
+  transform: translateX(-20px);   /* start slightly hidden */
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Links inside submenu */
+.sideNav-submenu a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+/* 🔥 Show on hover 
+.side-item:hover .sideNav-submenu {
+  display: block;
+}*/
+
+.sideNav-submenu.open {
+  display: block;
+}
+
+.side-item.active .sideNav-submenu {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.closeBtn:hover{
+  transform: rotate(360deg);
+  color: #e96a64ff;
+}
+
+.sidenav a:hover{font-size: 1.5rem;}
+
+.side-item.active > .sideNav-link, .sidenav a:hover{
+  background-color: #444;
+  color: #e96a64ff;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.sideNav-link {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  display: inline-block;
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 2.9rem;
-    font-size: 1rem;
-  }
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-.dropdown-content a {
-  float: none;
-  padding: 12px 10px;
-  display: block;
-  text-align: left;
+.logo{
+  position: absolute;
+  left: 20px;
 }
-
- .dropdown:hover .dropbtn  {
-  color: #e96a64ff;
-}
-
-.dropdown-content a:hover, .dropbtn:focus {
-  background-color: #ddd;
-  color: #e96a64ff;
-}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-header ul{
-  display: block;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  list-style-type: none; 
-} /*header ul list, to make the list horizontal and remove default padding and margin*/
-
-.logo {float: left;} /*make the logo float to the left and set size*/
 
 .homepage{
   font-size: 180%;
+  font-family: 'pacifico', cursive;
   color: #131313;
   text-transform: uppercase;
-  font-family: 'pacifico', cursive;
-} /*^ setting for site title*/
+}
+
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  border: white 5px double;
+}
+
 
 .about-page{
-  margin-top: 10px;
+  display: flex;
   letter-spacing: 1px;
-  width: 100%;
-  .about_cz, .about_as {
-    display: inline-block;
-    padding-bottom: 10px;
-    color: #131313;
-    font-size: 0.9rem;
-    padding: 0 10vw;
-  } /*setting for the links and type setting for the Navigation menu*/
-  a:hover{
-    background-color: transparent;
-    color: #e96a64ff;
-  }
+  list-style: none;
+  margin-left: 2vw;
+  gap: 20vw;
+  justify-content: center;
+  color: #131313;
+  font-size: 1rem;
 } /* overall setting for the two about pages*/
+
+.cz{margin-left: 0.5vw}
+.as{margin-left: 1vw;}
 
 a:webkit-any-link {cursor: pointer;}/*make the cursor a pointer when hovering over links*/
 
-li a:hover{
+li a:hover, .about-page a:hover, .homepage:hover{
+  display:block;
   background-color: transparent;
   color: #e96a64ff;
+  font-size: 1.5rem;
+  padding-right: 0;
 } /*hover effect for the links in the navigation menu*/
+
+.about-page a:hover{display:block; font-size: larger;} /*hover effect for the links in the navigation menu*/
+
+.dropdown-submenu{
+  position: relative;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-submenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 150px;
+  list-style: none;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-submenu a{
+  display: block;
+  text-align: center;
+  padding: 5px 55px;
+  color: #131313;
+  text-decoration: none;
+}
+
+.dropdown-submenu a:hover{background:#444;}
+
+.dropdown:hover .dropdown-submenu {
+  display: block;
+}

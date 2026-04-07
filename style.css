@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  margin-top: 2vw;
+  margin-right: 5px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -12,7 +14,7 @@ body {
   color: #131313;
   line-height: 1.5;
   font-family: 'Roboto Mono', monospace;
-  font-size: 2.5vh;
+  font-size: 14px;
   a {
         text-decoration: none;
         color: #131313;
@@ -25,18 +27,23 @@ body {
     display: block;
     flex-direction: column !important; /*stack vertically*/
     padding-top: 0px !important;
+    img{margin:0 !important;}
   }
   .page_name{
     text-align: center !important;
     padding-top: 10px !important;
     padding-right: 0;
+    h1{margin-top: 10px !important; font-size: 36px;}
   }
   .page_header img{
     width: 100% !important;
   }
+  .content_symbol{margin:0 !important;}
   .content .content_symbol img{
-    width: 20vw !important;
-    padding: 20px 10px !important;
+    width: 50% !important;
+    margin: 0 20% !important;
+    padding: 20px 0 !important;
+    justify-items: center !important;
   }
 } /*^ for smaller screen*/
 
@@ -46,52 +53,57 @@ body {
   gap: 0;
   margin: 0;
   img{
-    margin-right: 2rem;
+    margin: 2rem;
     float: left;
-    width: 70vw;
+    height: 80vh;
+    width: auto;
   }
 }
+
 
 .page_name {
   align-items: right;
   text-align: right;
   color: #131313;
   padding-right: 2rem;
-  padding-top: 10vw;
   font-family: 'Georgia', serif;
   flex: 1; /*allow content to grow and take available space*/
   h1 {
-    font-size: 6vh; 
+    margin-top: 60vh;
+    font-size: 40px; 
   }
   h2 {
-    font-size: 2.5vh;
+    font-size: 24px;
   }
 }
 
 .content{
   margin: 0 2rem;
+  display: grid;
+  grid-template-columns: 2;
   .content1 h2{
     margin-top: 20px;
   }
 }
 
 .content .content_symbol img{
-  width: 10vw;
+  width: 15vw;
   height: auto;
   float: left;
-  padding: 20px 10px;
+  padding: 50px 10px;
   padding-left: 0;
-  margin: 15px 2rem;
+  margin: 20px 2rem;
 }
+.content_symbol p{margin-left: calc(15vw + 30px + 2rem);}
 
 .content h2{
-  font-size: 3vh;
+  font-size: 20px;
   margin-top: 2rem;
   font-family: 'Georgia', serif;
 }
 /*^ setting for the content*/
 
-.content p {padding-top: 5px;}
+.content p {padding-top: 5px; font-size: 16px;}
 
 table{
   width: 100%;
@@ -99,6 +111,7 @@ table{
   margin-top: 15px;
   border: 1px solid #131313;
   margin: 0;
+  font-size: 16px;
 }
 
 th {
@@ -130,10 +143,13 @@ footer {
         .previous {
             float: left;
             padding: 10px;
+            padding-bottom: 0;
         }
         .next {
             float: right;
             padding: 10px;
+            padding-bottom: 0;
+            padding-right: 40px;
         }
     }
 } /*footer style*/
