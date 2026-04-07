@@ -22,7 +22,7 @@ body {
 }
 
 
-@media (max-width: 670px) {
+@media (max-width: 800px) {
   .page_header{
     display: block;
     flex-direction: column !important; /*stack vertically*/
