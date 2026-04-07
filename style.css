@@ -38,7 +38,7 @@ body {
   .page_header img{
     width: 100% !important;
   }
-  .content_symbol{margin:0 !important;}
+  .content_symbol p{margin:0 !important;}
   .content .content_symbol img{
     width: 50% !important;
     margin: 0 20% !important;
