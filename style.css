@@ -52,7 +52,8 @@ body {
     height: auto !important;
     margin:0 !important;
   }
-  table{width: 100% !important; overflow-x: auto;}
+  table{width: 90% !important; overflow-x: auto;}
+  td, th{padding: 10px 5px !important;}
   .content_symbol p{margin:0 !important;}
   .content .content_symbol img{
     width: 50% !important;
