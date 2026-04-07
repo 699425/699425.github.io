@@ -21,16 +21,20 @@ body {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 670px) {
+  .content {margin: 0 0.75rem !important;}
+}
+
+@media (max-width: 800px) {
   footer{
     text-align: center;
     font-weight: bold;
     .previous, .next{float:none !important; padding: 20px 20% !important;}
-    }
-  .content {margin: 0 0.75rem !important;}
+  }
 }
 
 @media (max-width: 1000px) {
+  
   .content {
     margin: 0 1rem !important;
     width: calc(100%- 2rem) !important;
