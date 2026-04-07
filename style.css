@@ -53,7 +53,7 @@ body {
     height: auto !important;
     margin:0 !important;
   }
-  table{width: 100% !important; overflow-x: auto;}
+  table{overflow-x: auto;}
   td, th{padding: 10px 3px !important;}
   .content_symbol p{margin:0 !important;}
   .content .content_symbol img{
@@ -129,6 +129,7 @@ table{
   border: 1px solid #131313;
   margin: 0;
   font-size: 16px;
+  justify-self: center;
 }
 
 th {
