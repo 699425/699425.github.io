@@ -23,9 +23,6 @@ body {
 
 @media (max-width: 670px) {
   .content {margin: 0 0.75rem !important;}
-}
-
-@media (max-width: 800px) {
   footer{
     text-align: center;
     font-weight: bold;
@@ -34,7 +31,7 @@ body {
 }
 
 @media (max-width: 1000px) {
-  
+  previous, .next{padding: 10px 20% !important;}
   .content {
     margin: 0 1rem !important;
     width: calc(100%- 2rem) !important;
@@ -57,7 +54,7 @@ body {
     margin:0 !important;
   }
   table{width: 90% !important; overflow-x: auto;}
-  td, th{padding: 10px 5px !important;}
+  td, th{padding: 10px 3px !important;}
   .content_symbol p{margin:0 !important;}
   .content .content_symbol img{
     width: 50% !important;
